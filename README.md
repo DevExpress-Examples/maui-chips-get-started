@@ -46,3 +46,4 @@ A demo application in this repository allows you to get started with chips &#821
 * [Tab View](https://github.com/DevExpress-Examples/maui-tab-view-get-started)
 * [Drawer Page](https://github.com/DevExpress-Examples/maui-drawer-page-get-started)
 * [Drawer View](https://github.com/DevExpress-Examples/maui-drawer-view-get-started)
+* [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
