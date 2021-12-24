@@ -24,7 +24,7 @@ A demo application in this repository allows you to get started with chips &#821
 * [Choice Chips](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChoiceChipGroup) allow users to select a single option from a set. These chips are best used when only one choice is possible. For example, use choice chips to select the size of an item placed in a shopping cart. Choice chips can be a good alternative to radio buttons and combo boxes.
 * [Input Chips](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.InputChipGroup) display user input as a single piece of information (may be validated, deleted, or modified). Input chips can be used to enter entities like places, activities, roles, or used to enter tags or email addresses.
 
-<img src="./Images/action-chips.png" alt="DevExpress Action Chips for .NET MAUI" height="700"> <img src="./Images/filter-chips.png" alt="DevExpress Filter Chips for .NET MAUI" height="700">
+<img src="./Images/chips-iphone.png" alt="DevExpress Mobile UI for iPhone" height="700"> <img src="./Images/chips-pixel.png" alt="DevExpress Mobile UI for Android" height="700">
 
 ## Documentation
 
