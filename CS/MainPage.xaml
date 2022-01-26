@@ -28,53 +28,55 @@
                 <Setter Property="AllowDeselect" Value="False"/>
             </Style>
             <Style x:Key="ChipGroupLayoutItemContainerStyle" TargetType="StackLayout">
-                <Setter Property="Margin" Value="0,16"/>
+                <Setter Property="Margin" Value="0, 16"/>
                 <Setter Property="Spacing" Value="0"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Spacing="0">
-            <StackLayout.Margin>
-                <x:OnIdiom Phone="16,20,16,10" Tablet="71,20,71,10"/>
-            </StackLayout.Margin>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4*"/>
-                    <RowDefinition Height="0.6*"/>
-                </Grid.RowDefinitions>
-                <Image Source="tshirt.png"/>
-                <Image x:Name="superhero" Source="{Binding SelectedSuperhero}"/>
+        <ScrollView>
+            <StackLayout Spacing="0">
+                <StackLayout.Margin>
+                    <x:OnIdiom Phone="10, 0" Tablet="20, 0"/>
+                </StackLayout.Margin>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="0.6*"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="tshirt.png"/>
+                    <Image x:Name="superhero" Source="{Binding SelectedSuperhero}"/>
 
-                <StackLayout Grid.Row="1" Spacing="0" Padding="0">
-                    <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
-                        <Label Text="SuperHero T-Shirt" Style="{StaticResource TextStyle}" TextColor="#3d3f42" />
-                        <Label Text="$ 30" Style="{StaticResource TextStyle}" TextColor="#1d1e1f" FontSize="Title"/>
-                    </StackLayout>
+                    <StackLayout Grid.Row="1" Spacing="0" Padding="0">
+                        <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                            <Label Text="SuperHero T-Shirt" Style="{StaticResource TextStyle}" TextColor="#3d3f42" />
+                            <Label Text="$ 30" Style="{StaticResource TextStyle}" TextColor="#1d1e1f" FontSize="Title"/>
+                        </StackLayout>
 
-                    <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
-                        <Label Text="PICK A COLOR" Style="{StaticResource TextStyle}"/>
-                        <dxe:ChoiceChipGroup x:Name="colorChoiceChipGroup"
+                        <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                            <Label Text="PICK A COLOR" Style="{StaticResource TextStyle}"/>
+                            <dxe:ChoiceChipGroup x:Name="colorChoiceChipGroup"
                                              SelectedIndex="{Binding SelectedColorIndex}"
                                              Style="{StaticResource ChoiceChipGroupStyle}">
-                            <dxe:Chip BackgroundColor="#f15558" Style="{StaticResource ColorChipStyle}"/>
-                            <dxe:Chip BackgroundColor="#ff7c11" Style="{StaticResource ColorChipStyle}"/>
-                            <dxe:Chip BackgroundColor="#ffbf22" Style="{StaticResource ColorChipStyle}"/>
-                            <dxe:Chip BackgroundColor="#00c831" Style="{StaticResource ColorChipStyle}"/>
-                            <dxe:Chip BackgroundColor="#2088ff" Style="{StaticResource ColorChipStyle}"/>
-                            <dxe:Chip BackgroundColor="#9865b0" Style="{StaticResource ColorChipStyle}"/>
-                        </dxe:ChoiceChipGroup>
-                    </StackLayout>
+                                <dxe:Chip BackgroundColor="#f15558" Style="{StaticResource ColorChipStyle}"/>
+                                <dxe:Chip BackgroundColor="#ff7c11" Style="{StaticResource ColorChipStyle}"/>
+                                <dxe:Chip BackgroundColor="#ffbf22" Style="{StaticResource ColorChipStyle}"/>
+                                <dxe:Chip BackgroundColor="#00c831" Style="{StaticResource ColorChipStyle}"/>
+                                <dxe:Chip BackgroundColor="#2088ff" Style="{StaticResource ColorChipStyle}"/>
+                                <dxe:Chip BackgroundColor="#9865b0" Style="{StaticResource ColorChipStyle}"/>
+                            </dxe:ChoiceChipGroup>
+                        </StackLayout>
 
-                    <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
-                        <Label Text="CHOOSE SIZE" Style="{StaticResource TextStyle}"/>
-                        <dxe:ChoiceChipGroup ItemsSource="{Binding Sizes}" SelectedItem="{Binding SelectedSize}"
+                        <StackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                            <Label Text="CHOOSE SIZE" Style="{StaticResource TextStyle}"/>
+                            <dxe:ChoiceChipGroup ItemsSource="{Binding Sizes}" SelectedItem="{Binding SelectedSize}"
                                                 Style="{StaticResource ChoiceChipGroupStyle}" ChipPadding="23,10"/>
-                    </StackLayout>
+                        </StackLayout>
 
-                    <dxe:SimpleButton Text="ADD TO CART" Icon="shopping_cart"/>
-                </StackLayout>
-            </Grid>   
-        </StackLayout>    
+                        <dxe:SimpleButton Text="ADD TO CART" Icon="shopping_cart"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
