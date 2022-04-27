@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using DevExpress.Maui.Editors;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Microsoft.Maui.Essentials;
 
 namespace ChipsExample {
     public partial class MainPage : ContentPage {
