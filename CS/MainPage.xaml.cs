@@ -7,7 +7,7 @@ using Microsoft.Maui.Controls;
 
 namespace ChipsExample {
     public partial class MainPage : ContentPage {
-        const int animationDuration = 600;
+        const int animationDuration = 450;
 
         ViewModel VM { get; }
 
@@ -33,6 +33,11 @@ namespace ChipsExample {
                 superhero.FadeTo(1, animationDuration, Easing.Linear),
                 superhero.TranslateTo(0, superhero.Y, animationDuration, Easing.CubicInOut)
                 );
+        }
+
+        protected override void OnSizeAllocated(double width, double height) {
+            VM.UpdateLayout(width > height);
+            base.OnSizeAllocated(width, height);
         }
     }
 }
