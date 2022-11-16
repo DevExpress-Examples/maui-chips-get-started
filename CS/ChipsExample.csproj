@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>ChipsExample</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -39,6 +39,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="DevExpress.Maui.Editors" Version="22.1.*" />
+	  <PackageReference Include="DevExpress.Maui.Editors" Version="22.2.2-beta" />
 	</ItemGroup>
 </Project>
