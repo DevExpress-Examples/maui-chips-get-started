@@ -40,7 +40,6 @@ A demo application in this repository allows you to get started with chips &#821
 * [Stocks App](https://github.com/DevExpress-Examples/maui-stocks-mini)
 * [Data Grid](https://github.com/DevExpress-Examples/maui-data-grid-get-started)
 * [Data Editors](https://github.com/DevExpress-Examples/maui-editors-get-started)
-* [Pie Chart](https://github.com/DevExpress-Examples/maui-pie-chart-get-started)
-* [Scatter Chart](https://github.com/DevExpress-Examples/maui-scatter-chart-get-started)
+* [Charts](https://github.com/DevExpress-Examples/maui-charts)
 * [Tab View](https://github.com/DevExpress-Examples/maui-tab-view-get-started)
 * [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
