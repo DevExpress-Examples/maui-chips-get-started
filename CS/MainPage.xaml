@@ -3,6 +3,7 @@
              x:Class="ChipsExample.MainPage"
              xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
              xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              BackgroundColor="{DynamicResource SecondaryColor}">
 
     <ContentPage.Resources>
@@ -31,9 +32,9 @@
                 <Setter Property="Padding" Value="0,14,0,10"/>
                 <Setter Property="AllowDeselect" Value="False"/>
             </Style>
-            <Style x:Key="ChipGroupLayoutItemContainerStyle" TargetType="VerticalStackLayout">
+            <Style x:Key="ChipGroupLayoutItemContainerStyle" TargetType="dx:DXStackLayout">
                 <Setter Property="Margin" Value="0, 16"/>
-                <Setter Property="Spacing" Value="0"/>
+                <Setter Property="ItemSpacing" Value="0"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -42,12 +43,12 @@
             <AbsoluteLayout AbsoluteLayout.LayoutBounds="{Binding ImageRect}"
                             AbsoluteLayout.LayoutFlags="All"
                             IsClippedToBounds="True">
-                <Image Source="tshirt.png"
+                <dx:DXImage Source="tshirt.png"
                        Aspect="AspectFit"
                        AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"
                        AbsoluteLayout.LayoutFlags="All"
                        Margin="5" />
-                <Image x:Name="superhero" Source="{Binding SelectedSuperhero}"
+                <dx:DXImage x:Name="superhero" Source="{Binding SelectedSuperhero}"
                        Aspect="AspectFit"
                        AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"
                        AbsoluteLayout.LayoutFlags="SizeProportional"
@@ -56,14 +57,14 @@
             <ScrollView AbsoluteLayout.LayoutBounds="{Binding DetailsRect}"
                         AbsoluteLayout.LayoutFlags="All"
                         Margin="5" >
-                <VerticalStackLayout Spacing="0"
+                <dx:DXStackLayout Orientation="Vertical" ItemSpacing="0"
                                      Padding="0">
-                    <VerticalStackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                    <dx:DXStackLayout Orientation="Vertical" Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
                         <Label Text="SuperHero T-Shirt" Style="{StaticResource TextStyle}" />
                         <Label Text="$ 30" Style="{StaticResource TextStyle}" FontSize="Title"/>
-                    </VerticalStackLayout>
+                    </dx:DXStackLayout>
 
-                    <VerticalStackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                    <dx:DXStackLayout Orientation="Vertical" Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
                         <Label Text="PICK A COLOR" Style="{StaticResource TextStyle}"/>
                         <dxe:ChoiceChipGroup x:Name="colorChoiceChipGroup"
                                              SelectedIndex="{Binding SelectedColorIndex}"
@@ -76,17 +77,17 @@
                             <dxe:Chip BackgroundColor="#4799DF" Style="{StaticResource ColorChipStyle}"/>
                             <dxe:Chip BackgroundColor="#CD98FF" Style="{StaticResource ColorChipStyle}"/>
                         </dxe:ChoiceChipGroup>
-                    </VerticalStackLayout>
+                    </dx:DXStackLayout>
 
-                    <VerticalStackLayout Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
+                    <dx:DXStackLayout Orientation="Vertical" Style="{StaticResource ChipGroupLayoutItemContainerStyle}">
                         <Label Text="CHOOSE SIZE" Style="{StaticResource TextStyle}"/>
                         <dxe:ChoiceChipGroup ItemsSource="{Binding Sizes}"
                                              SelectedItem="{Binding SelectedSize}"
                                              Style="{StaticResource ChoiceChipGroupStyle}"
                                              ChipPadding="23,10"/>
-                    </VerticalStackLayout>
-                    <dxc:SimpleButton Text="ADD TO CART" Icon="shopping_cart" BackgroundColor="#2088FF"/>
-                </VerticalStackLayout>
+                    </dx:DXStackLayout>
+                    <dx:DXButton Content="ADD TO CART" Icon="shopping_cart" BackgroundColor="#2088FF"/>
+                </dx:DXStackLayout>
             </ScrollView>
         </AbsoluteLayout>
     </ContentPage.Content>
