@@ -54,7 +54,7 @@ A demo application in this repository allows you to get started with chips &#821
 * [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
 * [Popup](https://github.com/DevExpress-Examples/maui-popup-get-started)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=maui-chips-get-started&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=maui-chips-get-started&~~~was_helpful=no)
 
